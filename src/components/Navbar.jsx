@@ -41,7 +41,7 @@ export default function Navbar(){
                         <div className='flex flex-col lg:flex-row items-center py-4 lg:py-0 gap-8 lg:gap-4'>
                         <a href="#" className='hover:text-white'>Home</a>
                         <a href="#market" className='text-gray-200 hover:text-white'>Market</a>
-                        <a href="#" className='text-gray-200 hover:text-white'>Blog</a>
+                        <a href="#Blog" className='text-gray-200 hover:text-white'>Blog</a>
                         <a href="#" className='text-gray-200 hover:text-white'>Feature</a>
                         </div>
                         <button className='text-center capitalize bg-prim bg-opacity-25 text-prim border-2 border-prim px-4 py-1 rounded-lg hover:bg-opacity-100 hover:text-white duration-150 ease-in'>sign up</button>

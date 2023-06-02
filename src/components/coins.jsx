@@ -11,7 +11,6 @@ export default function Coin(){
         };
     }, [])
     const [coina, setCoina] = useState([]);
-    const [color, setColor] = useState('')
     useEffect(()=>{
         fetch(url, options)
         .then(Response => Response.json())
@@ -19,11 +18,10 @@ export default function Coin(){
             const {coins} = data.data;
             const coinss = coins.slice(0, 10)
             setCoina(coinss)
-            coinss.forEach(coin=>{
-               let change = coin.change;
-               change = Number(change);
-              return  change <= +0 ? setColor('text-red-700') : setColor('text-green-700');
-            })
+            // coinss.forEach(coin=>{
+            //    let change = coin.change;
+            //    change = Number(change);
+            // })
         })
         .catch(error=>{
             console.log(error)
@@ -50,7 +48,7 @@ export default function Coin(){
                             <td className='flex items-center'><div className='w-5'><img src={coin.iconUrl} alt="" className='w-full'/></div>{coin.symbol}</td>
                             <td className=''>{coin.name}</td>
                             <td>${coin.price.slice(0, 8)}</td>
-                            <td className={`${color}`}>{coin.change}</td>
+                            <td className={coin.change < 0 ? 'text-red-700' : 'text-green-700'}>{coin.change}</td>
                             <td>${coin.marketCap}</td>
                             </tr>
                         );
