@@ -1,4 +1,6 @@
 import {BsInstagram, BsTwitter, BsLinkedin, BsYoutube} from 'react-icons/bs';
+import appstore from '../assets/appstore.svg';
+import playstore from '../assets/playstore.svg';
 export default function Footer(){
     const currentYear = new Date().getFullYear();
     return(
@@ -28,10 +30,12 @@ export default function Footer(){
                             <a href="#" className="text-sm text-gray-200 hover:text-white">Terms of services</a>
                             <a href="#" className="text-sm text-gray-200 hover:text-white">Low Enhancement</a>
                         </div>
-                        <div className="flex flex-col gap-1">
-                            <h3 className="font-bold text-lg mb-2">Install App</h3>
-                            <div><img src={''} alt="" /></div>
-                            <div><img src={''} alt="" /></div>
+                        <div className="flex flex-col">
+                            <h3 className="font-bold text-lg">Install App</h3>
+                            <div className=''>
+                                <div className='w-24 h-10'><img src={playstore} alt="" className=''/></div>
+                                <div className='w-24'><img src={appstore} alt="" className=''/></div>
+                            </div>
                         </div>
                     </div>
                 </div>
