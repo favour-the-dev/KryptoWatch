@@ -22,7 +22,7 @@ export default function Navbar(){
     }, [])
     return(
         <>
-            <header className={`w-screen ${fixed} bg-black p-5 lg:px-20`}>
+            <header className={`w-screen z-40 ${fixed} bg-black p-5 lg:px-20`}>
                 <div className={`w-full text-white flex items-center justify-between`}>
                     <div className='flex items-center justify-between w-full lg:w-fit'>
                         <div className='flex items-center text-white'>
